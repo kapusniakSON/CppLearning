@@ -2,7 +2,7 @@
 
 void nowHeight(double height, int second)
 {
-    double gravitation{9.8};
+    constexpr double gravitation{9.8};
     double nowHeight{};
 
     nowHeight = height - gravitation * second * second / 2;
