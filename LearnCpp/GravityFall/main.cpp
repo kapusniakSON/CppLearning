@@ -2,8 +2,7 @@
 
 void nowHeight(double height, int second);
 
-int main()
-{
+int main() {
     std::cout << "Enter a height: ";
     double height;
     std::cin >> height;
