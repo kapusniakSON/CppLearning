@@ -9,8 +9,6 @@
         "-g",
         "-std=c++23",
         "-ggdb",
-        "-O2",
-        "-DNDEBUG",
         "-pedantic-errors",
         "-Wall",
         "-Weffc++",
