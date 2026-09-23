@@ -20,13 +20,25 @@ char getMathOperator() {
 
 void printMathOperation(double x, double y, char mathOperator) {
 
-    if (mathOperator == '+') {
+    switch (mathOperator) {
+    case '+':
         std::cout << x << ' ' << mathOperator << ' ' << y << " is " << x + y << '\n';
-    } else if (mathOperator == '-') {
+        break;
+    case '-':
         std::cout << x << ' ' << mathOperator << ' ' << y << " is " << x - y << '\n';
-    } else if (mathOperator == '*') {
+        break;
+    case '*':
         std::cout << x << ' ' << mathOperator << ' ' << y << " is " << x * y << '\n';
-    } else if (mathOperator == '/') {
-        std::cout << x << ' ' << mathOperator << ' ' << y << " is " << x / y << '\n';
+        break;
+    case '/': {
+        if (y == 0) {
+            std::cout << "Error: Division by zero!\n";
+        } else {
+            std::cout << x << ' ' << mathOperator << ' ' << y << " is " << x / y << '\n';
+        }
+    } break;
+
+    default:
+        std::cout << "Error: Invalid math operator!\n";
     }
 }
